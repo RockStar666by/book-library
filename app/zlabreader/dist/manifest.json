@@ -49,7 +49,7 @@
                     "icon": "sap-icon://customer",
                     "indicatorDataSource": {
                         "dataSource": "mainService",
-                        "path": "/dynamic_dest/cap-library-app-srv/library/Readers/$count",
+                        "path": "/dynamic_dest/library/Readers/$count",
                         "refresh": 10
                     }
                 }

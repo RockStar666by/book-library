@@ -6,10 +6,13 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap/approuter": "*",
     "@sap/cds": "^6",
     "@sap/vscode-cds": "^6.3.0",
+    "@sap/xssec": "^3.2.14",
     "express": "^4",
-    "hdb": "^0.19.0"
+    "hdb": "^0.19.0",
+    "passport": "^0.6.0"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.102.13",
@@ -58,6 +61,9 @@
     "requires": {
       "db": {
         "kind": "hana-cloud"
+      },
+      "uaa": {
+        "kind": "xsuaa"
       }
     },
     "hana": {
