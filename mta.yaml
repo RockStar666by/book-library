@@ -9,6 +9,7 @@ modules:
     requires:
       - name: cap-library-app-db
       - name: uaa_cap-library-app
+      - name: dest-service
     provides:
       - name: srv-api
         properties:
@@ -166,6 +167,12 @@ resources:
       service: xsuaa
       service-name: cap-library-app-xsuaa-service
       service-plan: application
+  - name: dest-service
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service: destination
+      service-name: dest-service
+      service-plan: lite
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true

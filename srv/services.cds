@@ -7,7 +7,9 @@ service LibraryService {
         @Core.OperationAvailable: in.returnTheBookEnabled
         action returnTheBook();
     };
-    entity Books        as projection on library.Books;
+    entity Books        as projection on library.Books actions {
+        action orderBook(Quantity: Integer @title : 'Order Quantity');
+    };
     entity Readers      as projection on library.Readers;
     entity Authors      as projection on library.Authors;
     entity Statuses     as projection on masterdata.Statuses;
